@@ -89,11 +89,11 @@ class ModuleTest extends PHPUnit_Framework_TestCase
         $repository->permissions->push = true;
         $repository->name = $name;
 
-        $module = $this->getMockBuilder(Entity\Module::class)->getMock();
-
-        $modules = [
-            $module,
+        $repositories = [
+            $repository,
         ];
+
+        $module = $this->getMockBuilder(Entity\Module::class)->getMock();
 
         $moduleMapper = $this->getMockBuilder(Mapper\Module::class)->getMock();
 
@@ -130,7 +130,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
             $githubClient
         );
 
-        $this->assertSame($modules, $service->currentUserModules());
+        $this->assertSame($repositories, $service->currentUserModules());
     }
 
     public function testListUserModulesDoesNotLookupModulesFromApiWhereUserHasNoPushPrivilege()
