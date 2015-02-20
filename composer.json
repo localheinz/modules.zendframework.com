@@ -8,6 +8,7 @@
         "evandotpro/edp-github": "dev-master",
         "ezyang/htmlpurifier": "4.6.*",
         "monolog/monolog": "~1.12",
+        "phing/phing": "~2.10",
         "php": "~5.5",
         "rwoverdijk/assetmanager": "1.3.*",
         "socalnick/scn-social-auth": "1.14.1",
